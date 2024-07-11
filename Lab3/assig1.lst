@@ -1,0 +1,99 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             data,DATA,READONLY
+    2 00000000 00000004 
+                       value1  dcd              0x04
+    3 00000004         
+    4 00000004                 AREA             data2,DATA,READWRITE
+    5 00000000 00000000 
+                       result  dcd              0x00
+    6 00000004         
+    7 00000004                 AREA             assig1,CODE, READONLY
+    8 00000000 E59F1018        ldr              r1,=value1
+    9 00000004 E59F2018        ldr              r2,=result
+   10 00000008 E5913000        ldr              r3,[r1]
+   11 0000000C E2133001        ands             r3,r3,#0x01
+   12 00000010 03A03002        moveq            r3,#0x02
+   13 00000014 13A03001        movne            r3,#0x01
+   14 00000018 E5824000        str              r4,[r2]
+   15 0000001C EAFFFFFE 
+                       e       b                e
+   16 00000020                 end
+              00000000 
+              00000000 
+Command Line: --debug --xref --device=DARMP --apcs=interwork -oassig1.o -IC:\Ke
+il\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=assig1.lst assig1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+data 00000000
+
+Symbol: data
+   Definitions
+      At line 1 in file assig1.s
+   Uses
+      None
+Comment: data unused
+value1 00000000
+
+Symbol: value1
+   Definitions
+      At line 2 in file assig1.s
+   Uses
+      At line 8 in file assig1.s
+Comment: value1 used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+data2 00000000
+
+Symbol: data2
+   Definitions
+      At line 4 in file assig1.s
+   Uses
+      None
+Comment: data2 unused
+result 00000000
+
+Symbol: result
+   Definitions
+      At line 5 in file assig1.s
+   Uses
+      At line 9 in file assig1.s
+Comment: result used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+assig1 00000000
+
+Symbol: assig1
+   Definitions
+      At line 7 in file assig1.s
+   Uses
+      None
+Comment: assig1 unused
+e 0000001C
+
+Symbol: e
+   Definitions
+      At line 15 in file assig1.s
+   Uses
+      At line 15 in file assig1.s
+Comment: e used once
+2 symbols
+328 symbols in table

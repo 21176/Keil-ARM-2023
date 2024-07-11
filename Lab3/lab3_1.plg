@@ -1,0 +1,22 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Amrita cse\5th Semester\Embedded Systems\Lab\ARM\Lab3\lab3_1.uvproj
+Project File Date:  09/08/2023
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling expt1.s...
+expt1.s(2): error: A1517E: Unexpected operator equal to or equivalent to /
+Target not created
+Build target 'Target 1'
+assembling expt1.s...
+expt1.s(2): error: A1517E: Unexpected operator equal to or equivalent to /
+Target not created
+Build target 'Target 1'
+assembling expt1.s...
+linking...
+Program Size: Code=44 RO-data=8 RW-data=4 ZI-data=0  
+"lab3_1.axf" - 0 Error(s), 0 Warning(s).

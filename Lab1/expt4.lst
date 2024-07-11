@@ -1,0 +1,38 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             expt1_4,CODE, READONLY
+    2 00000000 E3A0100A        mov              r1, #10
+    3 00000004 E1E02001        mvn              r2, r1
+    4 00000008 EAFFFFFE 
+                       e       b                e
+    5 0000000C                 end
+Command Line: --debug --xref --device=DARMP --apcs=interwork -oexpt4.o -IC:\Kei
+l\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=expt4.lst expt4.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+e 00000008
+
+Symbol: e
+   Definitions
+      At line 4 in file expt4.s
+   Uses
+      At line 4 in file expt4.s
+Comment: e used once
+expt1_4 00000000
+
+Symbol: expt1_4
+   Definitions
+      At line 1 in file expt4.s
+   Uses
+      None
+Comment: expt1_4 unused
+2 symbols
+322 symbols in table
